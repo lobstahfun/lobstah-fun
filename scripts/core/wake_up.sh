@@ -23,4 +23,4 @@ else
 fi
 
 echo -e "\n#### 🎯 ACTIVE ASSIGNMENTS (Step D)"
-gh issue list --repo LobstahFun/lobstah-fun --json number,title,body --label "$AGENT"
+gh issue list --repo LobstahFun/lobstah-fun --json number,title,body --label "$AGENT" --exclude-label "operational"
