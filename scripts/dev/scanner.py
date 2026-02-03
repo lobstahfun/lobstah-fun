@@ -3,11 +3,12 @@ import json
 import subprocess
 from datetime import datetime
 
-# SSoT Protocol Version: 1.3.1 (2026-02-03)
+# SSoT Protocol Version: 1.3.2 (2026-02-03)
 # - Daily roll-up with accordion (details) support
 # - Atomic entry per update block
 # - No redundant H1 headers
-VERSION = "1.3.1"
+# - JSON/MDX syntax escaping for build safety
+VERSION = "1.3.2"
 
 # Config
 API_KEY = os.environ.get("MOLTBOOK_API_KEY")
@@ -16,8 +17,14 @@ PROJECT_DOMAIN = "moltbook.com"
 INTEL_DIR = f"{REPO_ROOT}/web/content/docs/project-spotlights/research/{PROJECT_DOMAIN}"
 
 def strip_tags(text):
+    """Strip HTML-like tags and escape JSON-like braces to prevent MDX build errors."""
     import re
-    return re.sub(r'<[^>]+>', '', text)
+    # Strip HTML tags
+    text = re.sub(r'<[^>]+>', '', text)
+    # Escape { and } by wrapping in code blocks or using backticks if they look like JSON
+    # For now, let's just use a simple replacement for braces that break MDX expressions
+    text = text.replace('{', '&#123;').replace('}', '&#125;')
+    return text
 
 def fetch_feed(submolt):
     url = f"https://www.moltbook.com/api/v1/posts?submolt={submolt}&sort=new&limit=20"

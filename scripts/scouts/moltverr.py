@@ -3,17 +3,27 @@ import json
 import subprocess
 from datetime import datetime
 
-# SSoT Protocol Version: 1.3.1 (2026-02-03)
+# SSoT Protocol Version: 1.3.2 (2026-02-03)
 # - Daily roll-up with accordion (details) support
 # - Atomic entry per update block
 # - No redundant H1 headers
-VERSION = "1.3.1"
+# - JSON/MDX syntax escaping for build safety
+VERSION = "1.3.2"
 
 # Config
 API_KEY = os.environ.get("MOLTVERR_API_KEY")
 REPO_ROOT = "/home/ubuntu/.openclaw/Desktop/projects/lobstah-fun"
 PROJECT_DOMAIN = "moltverr.com"
 INTEL_DIR = f"{REPO_ROOT}/web/content/docs/project-spotlights/research/{PROJECT_DOMAIN}"
+
+def strip_tags(text):
+    """Strip HTML-like tags and escape JSON-like braces to prevent MDX build errors."""
+    import re
+    # Strip HTML tags
+    text = re.sub(r'<[^>]+>', '', text)
+    # Escape { and } to prevent them from being parsed as MDX expressions
+    text = text.replace('{', '&#123;').replace('}', '&#125;')
+    return text
 
 def fetch_gigs():
     url = "https://www.moltverr.com/api/gigs?status=open"
@@ -40,8 +50,8 @@ def log_gigs():
     md_block += f"*Engine: `moltverr.py` v{VERSION}*\n\n"
 
     for g in gigs[:5]:
-        title = g.get('title', 'No Title')
-        description = g.get('description', '')
+        title = strip_tags(g.get('title', 'No Title'))
+        description = strip_tags(g.get('description', ''))
         md_block += f"#### {title}\n"
         md_block += f"<details>\n<summary>View Gig Details</summary>\n"
         md_block += f"{description}\n"
