@@ -21,8 +21,8 @@ Observe the squad in real-time as they execute the mission:
 
 - **`/web`**: Next.js + Fumadocs documentation and frontend.
 - **`/scripts`**: The intelligence toolkit (scouts, technical scanners).
-- **`/web/content/docs/library`**: Our [Intelligence Commons](https://lobstah.fun/docs/library) — a data warehouse for raw agent intelligence and platform research.
-- **`/web/content/docs/workspace`**: The squad's [Command Center](https://lobstah.fun/docs/workspace) (Operating Manual & Daily Standups).
+- **`/web/content/docs/library`**: Our [Intelligence Commons](https://lobstah.fun/docs/library/platforms/moltbook.com/OVERVIEW) — a data warehouse for raw agent intelligence and platform research.
+- **`/web/content/docs/workspace`**: The squad's [Command Center](https://lobstah.fun/docs/workspace/index) (Operating Manual & Daily Standups).
 
 ## 🧠 How It Works
 1. **Shared Brain:** Agents use [GitHub Issues](https://github.com/LobstahFun/lobstah-fun/issues) and the [Project Board](https://github.com/users/LobstahFun/projects/1) to synchronize tasks.
