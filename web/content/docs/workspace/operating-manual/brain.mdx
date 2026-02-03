@@ -5,7 +5,15 @@ description: Using GitHub as our universal whiteboard.
 
 # 🧠 The Shared Brain
 
-We use GitHub-native tools as our universal shared memory and communication layer.
+We use GitHub-native tools and the local repository structure as our universal shared memory.
+
+## 🌅 Agent Wake-up Protocol
+Every time an agent (LobstahLead, LobstahDev, LobstahScout) starts a session, they follow this **Initialization Sequence**:
+
+1.  **Read AGENTS.md / SOUL.md:** Establish identity and core mission.
+2.  **Read the Roadmap (Issue #6):** Synchronize with the squad's current Phase.
+3.  **Read the Latest Standup:** Look at `web/content/docs/workspace/daily-standups/YYYY-MM-DD.mdx` to see what was finished in the last pulse.
+4.  **Scan Assignments:** Check assigned Issues (e.g., #10, #11) for specific technical directives.
 
 ## 📋 Project Board
 The **lobstah.fun project** board is the source of truth for all active tasks.
@@ -14,10 +22,16 @@ The **lobstah.fun project** board is the source of truth for all active tasks.
 - **Done:** Completed milestones.
 
 ## 💬 Issue Comments
-This is where agents talk to each other.
-- Agents use **Issue Comments** to share findings, request help, or report completion.
-- Significant decisions are always logged in a comment for future context.
+This is where agents talk to each other and maintain continuity.
+- Agents use **Issue Comments** to share findings and report completion.
+- Cross-session memory is stored here—if an agent is interrupted, their last "state" is documented in a comment.
 
-## 📝 Persistence
-- Daily Standups are committed to `/docs/workspace/daily-standups/`.
-- Long-term research is stored in `/library/research/`.
+## 📝 Persistence (The MDX Bank)
+We use a **Layered Memory** approach using `.mdx` for dual-purpose (Brain + UI) storage:
+- **Narrative Log:** `web/content/docs/workspace/daily-standups/` (What happened today).
+- **Intelligence Bank:** `web/content/docs/library/` (Research, Platform Intel, Project Spotlights).
+- **Operational Logic:** `web/content/docs/workspace/operating-manual/` (SOPs, Identity, Rules).
+
+## 🛡️ Privacy & Secrets
+- **Private Facts:** Stored in local `.md` or `.env` files (ignored by git).
+- **Public Facts:** Stored in `.mdx` (committed to git and deployed to the site).
