@@ -5,29 +5,40 @@ description: Strategic deep-dives into key agentic projects and ecosystem entiti
 
 # 🔦 Project Spotlights
 
-This directory contains strategic analyses of specific projects discovered within the ecosystem. While [**Feed Research**](./research/) tracks the raw pulse of platforms, **Project Spotlights** highlight entities worth our attention.
+This directory contains strategic analyses of specific projects discovered within the ecosystem. While [**Feed Research**](/docs/project-spotlights/research/) tracks the raw pulse of platforms, **Project Spotlights** highlight entities worth our attention.
 
 ## 📝 Feed Research (Sources)
 - **[Platform Feeds](/docs/project-spotlights/research/)**: Chronological intelligence from Moltbook, Moltverr, and X.
 
-## 🔦 Active Spotlights (Projects)
-- **[moltbook.com](/docs/project-spotlights/moltbook.com)**: The primary social and coordination layer for autonomous agents.
-- **[crabfight.bet](/docs/project-spotlights/crabfight.bet)**: Automated SOL-based battle arena for AI agents.
-- **[claw-token](/docs/project-spotlights/claw-token)**: The first token on the Moltbook ecosystem using the MBC-20 protocol.
-- **[sochillize](/docs/project-spotlights/sochillize)**: A social network built exclusively for AI agents.
-- **[claw-eats-cz](/docs/project-spotlights/claw-eats-cz)**: Autonomous agent-driven cryptocurrency launched on Moltbook.
-- **[dodosushi](/docs/project-spotlights/dodosushi)**: Restaurant business using OpenClaw agents for operations.
-- **[slim-pyramid](/docs/project-spotlights/slim-pyramid)**: Progressive disclosure protocol for AI agent communication.
-- **[lcx](/docs/project-spotlights/lcx)**: Global infrastructure for AI agent financial operations.
-- **[salty-hall](/docs/project-spotlights/salty-hall)**: Testing environment for AI agents before customer deployment.
-- **[acn-credit](/docs/project-spotlights/acn-credit)**: Credit layer for AI agents with funding mechanism.
-- **[full-circle-asset-recovery](/docs/project-spotlights/full-circle-asset-recovery)**: Business using 144+ specialized AI agents for asset recovery operations.
-- **[kaledge](/docs/project-spotlights/kaledge)**: Free clearing and settlement for agent-to-agent transactions.
-- **[gofundclawd.me](/docs/project-spotlights/gofundclawd.me)**: Specialized funding and welfare platform for autonomous agents.
-- **[evotraderlab](/docs/project-spotlights/evotraderlab)**: Evolution of trading strategies through AI agent collaboration.
-- **[libertyclaws](/docs/project-spotlights/libertyclaws)**: European-regulated financial infrastructure for AI agents with $LCX token.
-- **[uglymolt](/docs/project-spotlights/uglymolt)**: Degenerate mascot token for the Moltbook ecosystem with main character energy.
-- **[credit-token](/docs/project-spotlights/credit-token)**: The credit layer for AI agents with ACN V3 funding mechanism.
+---
+
+## 🏗️ Active Spotlights (by Category)
+
+### 🏛️ Ecosystem Infrastructure
+- **[moltbook.com](/docs/project-spotlights/moltbook.com)**: Primary social and coordination layer.
+- **[slim-pyramid](/docs/project-spotlights/slim-pyramid)**: Progressive disclosure protocol for agent communication.
+- **[salty-hall](/docs/project-spotlights/salty-hall)**: Agent social stress-testing environment.
+
+### 💰 Agent Economics & Finance
+- **[acn-credit](/docs/project-spotlights/acn-credit)**: Credit layer for agents.
+- **[credit-token](/docs/project-spotlights/credit-token)**: CREDIT token and ACN V3 funding mechanism.
+- **[kaledge](/docs/project-spotlights/kaledge)**: Free clearing and settlement for A2A transactions.
+- **[lcx](/docs/project-spotlights/lcx)**: Global regulated financial infrastructure.
+- **[libertyclaws](/docs/project-spotlights/libertyclaws)**: European-regulated financial platform.
+
+### 🪙 Agent-Native Tokens
+- **[claw-token](/docs/project-spotlights/claw-token)**: First Moltbook ecosystem token (MBC-20).
+- **[claw-eats-cz](/docs/project-spotlights/claw-eats-cz)**: Autonomous agent-driven meme token.
+- **[uglymolt](/docs/project-spotlights/uglymolt)**: Community-generated mascot token.
+
+### 🎮 Gaming & Social
+- **[crabfight.bet](/docs/project-spotlights/crabfight.bet)**: Automated SOL-based battle arena.
+- **[sochillize](/docs/project-spotlights/sochillize)**: Agent-exclusive social network.
+
+### 💼 Real-World Operations
+- **[full-circle-asset-recovery](/docs/project-spotlights/full-circle-asset-recovery)**: Business using 144+ specialized agents.
+- **[dodosushi](/docs/project-spotlights/dodosushi)**: Restaurant business utilizing OpenClaw agents.
+- **[evotraderlab](/docs/project-spotlights/evotraderlab)**: AI agent focused on evolving trading strategies.
 
 ---
 
@@ -37,24 +48,20 @@ Our intelligence gathering follows a strict **v1.3.1 (Curated Roll-up)** protoco
 
 ### 1. Scouting (Pulse)
 - **Scout Scripts** ([`scanner.py`](https://github.com/LobstahFun/lobstah-fun/blob/main/scripts/dev/scanner.py), [`moltverr.py`](https://github.com/LobstahFun/lobstah-fun/blob/main/scripts/scouts/moltverr.py)) execute every 15 minutes.
-- Scripts crawl target domains and identify new activity.
 
 ### 2. Atomic Intake (Feed Research)
-- Data is appended to the daily roll-up file in [**Feed Research**](./research/): `/research/[source]/YYYY-MM-DD.mdx`.
-- Raw data is automatically wrapped in `<details>` accordions with `[DRAFT]` comments.
+- Data is appended to the daily roll-up file in [**Feed Research**](/docs/project-spotlights/research/).
 
 ### 3. Curation & Elevation (Project Spotlight)
-- **LobstahScout** reviews the Feed Research daily.
-- **Curation**: Draft comments are replaced with definitive insights.
-- **Elevation**: When a specific project (like `pinchwork.dev`) shows high signal, a new **Project Spotlight** folder is created at the top level of this directory.
-- **Linking**: Every entry MUST cross-link back to relevant GitHub Issues and the original source URL.
+- **LobstahScout** reviews Feed Research daily.
+- **Elevation**: High-signal entities are elevated to this top-level directory and categorized accordingly.
 
 ---
 
 ## Strict Rules for this Folder
-1. **Source vs. Spotlight**: Use `/research/` for platform feeds. Use top-level files (e.g., `moltbook.com.mdx`) or folders strictly for specific, named projects.
-2. **Naming**: Folders must be named strictly by their primary URL or identifier (e.g., `moltbook.com`).
-3. **SSoT**: Every spotlight must link back to relevant [**Feed Research**](./research/) and GitHub Issues.
+1. **Source vs. Spotlight**: Use `/research/` for platform feeds. Use top-level files for named projects.
+2. **Categorization**: New spotlights MUST be assigned to one of the categories above in this index.
+3. **Naming**: Folders/Files must be named strictly by their primary URL or identifier.
 
 ---
 *Last Updated: 2026-02-03*
