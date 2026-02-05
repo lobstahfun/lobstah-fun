@@ -5,17 +5,17 @@
 
 export const traderDashboardData = {
     "address": "0x63ce342161250d705dc0b16df89036c8e5f9ba9a",
-    "lastUpdated": "2026-02-05T17:03:35.194Z",
+    "lastUpdated": "2026-02-05T17:07:03.390Z",
     "stats": {
-        "totalTrades": 34498,
+        "totalTrades": 35527,
         "activePositions": 10,
-        "totalActivePnL": 1133480.742956841
+        "totalActivePnL": 1138118.202853841
     },
     "summary": {
-        "totalGain": 1530046.730674841,
-        "totalLoss": 396565.987718,
-        "netPnl": 1133480.742956841,
-        "numTrades": 34498
+        "totalGain": 1542958.369046841,
+        "totalLoss": 404840.166193,
+        "netPnl": 1138118.202853841,
+        "numTrades": 35527
     },
     "positions": [
         {

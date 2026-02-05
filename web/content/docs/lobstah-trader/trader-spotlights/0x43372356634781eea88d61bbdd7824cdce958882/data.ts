@@ -5,86 +5,86 @@
 
 export const traderDashboardData = {
     "address": "0x43372356634781eea88d61bbdd7824cdce958882",
-    "lastUpdated": "2026-02-05T17:03:35.232Z",
+    "lastUpdated": "2026-02-05T17:07:03.424Z",
     "stats": {
-        "totalTrades": 100,
+        "totalTrades": 2000,
         "activePositions": 10,
-        "totalActivePnL": 1177680.9832648411
+        "totalActivePnL": 1394341.767584841
     },
     "summary": {
-        "totalGain": 1201046.173105841,
-        "totalLoss": 23365.189841,
-        "netPnl": 1177680.9832648411,
-        "numTrades": 100
+        "totalGain": 2031382.576561841,
+        "totalLoss": 637040.808977,
+        "netPnl": 1394341.767584841,
+        "numTrades": 2000
     },
     "positions": [
         {
-            "title": "LoL: Invictus Gaming vs Weibo Gaming (BO3) - LPL Group Ascend",
-            "slug": "lol-invictus-gaming-vs-weibo-gaming-bo3---lpl-group-ascend",
-            "size": 19,
+            "title": "LoL: Weibo Gaming vs Anyone's Legend (BO3) - LPL Group Ascend",
+            "slug": "lol-weibo-gaming-vs-anyones-legend-bo3---lpl-group-ascend",
+            "size": 315,
             "avgPrice": 0,
             "percentPnl": 0
         },
         {
-            "title": "Will Bitcoin dip to $35,000 in February?",
-            "slug": "will-bitcoin-dip-to-35000-in-february",
-            "size": 11,
+            "title": "Magic vs. Thunder",
+            "slug": "magic-vs-thunder",
+            "size": 115,
             "avgPrice": 0,
             "percentPnl": 0
         },
         {
-            "title": "Binghamton Bearcats vs. UMBC Retrievers: O/U 139.5",
-            "slug": "binghamton-bearcats-vs-umbc-retrievers-ou-1395",
-            "size": 10,
+            "title": "76ers vs. Clippers",
+            "slug": "76ers-vs-clippers",
+            "size": 111,
             "avgPrice": 0,
             "percentPnl": 0
         },
         {
-            "title": "LoL: JD Gaming vs Top Esports (BO3) - LPL Group Ascend",
-            "slug": "lol-jd-gaming-vs-top-esports-bo3---lpl-group-ascend",
-            "size": 10,
+            "title": "LoL: OKSavingsBank BRION vs BNK FEARX (BO3)",
+            "slug": "lol-oksavingsbank-brion-vs-bnk-fearx-bo3",
+            "size": 76,
             "avgPrice": 0,
             "percentPnl": 0
         },
         {
-            "title": "Canadiens vs. Jets",
-            "slug": "canadiens-vs-jets",
-            "size": 8,
+            "title": "LoL: Invictus Gaming vs JD Gaming (BO3) - LPL Group Ascend",
+            "slug": "lol-invictus-gaming-vs-jd-gaming-bo3---lpl-group-ascend",
+            "size": 67,
             "avgPrice": 0,
             "percentPnl": 0
         },
         {
-            "title": "EdgeX FDV above $3B one day after launch?",
-            "slug": "edgex-fdv-above-3b-one-day-after-launch",
-            "size": 8,
-            "avgPrice": 0,
-            "percentPnl": 0
-        },
-        {
-            "title": "US strikes Iran by June 30, 2026?",
-            "slug": "us-strikes-iran-by-june-30-2026",
-            "size": 8,
+            "title": "Creighton Bluejays vs. Georgetown Hoyas",
+            "slug": "creighton-bluejays-vs-georgetown-hoyas",
+            "size": 59,
             "avgPrice": 0,
             "percentPnl": 0
         },
         {
             "title": "U.S. anti-cartel ground operation in Mexico by January 31?",
             "slug": "us-anti-cartel-ground-operation-in-mexico-by-january-31",
-            "size": 7,
+            "size": 56,
             "avgPrice": 0,
             "percentPnl": 0
         },
         {
-            "title": "Valorant: Pcific Esports vs ULF Esports (BO3) - VCT EMEA Kickoff Playoffs",
-            "slug": "valorant-pcific-esports-vs-ulf-esports-bo3---vct-emea-kickoff-playoffs",
-            "size": 6,
+            "title": "LoL: JD Gaming vs Top Esports (BO3) - LPL Group Ascend",
+            "slug": "lol-jd-gaming-vs-top-esports-bo3---lpl-group-ascend",
+            "size": 53,
             "avgPrice": 0,
             "percentPnl": 0
         },
         {
-            "title": "LoL: Weibo Gaming vs Anyone's Legend (BO3) - LPL Group Ascend",
-            "slug": "lol-weibo-gaming-vs-anyones-legend-bo3---lpl-group-ascend",
-            "size": 5,
+            "title": "Bulls vs. Bucks",
+            "slug": "bulls-vs-bucks",
+            "size": 47,
+            "avgPrice": 0,
+            "percentPnl": 0
+        },
+        {
+            "title": "North Texas Mean Green vs. Rice Owls",
+            "slug": "north-texas-mean-green-vs-rice-owls",
+            "size": 45,
             "avgPrice": 0,
             "percentPnl": 0
         }
@@ -92,54 +92,54 @@ export const traderDashboardData = {
     "trades": [],
     "topMarkets": [
         {
-            "question": "LoL: Invictus Gaming vs Weibo Gaming (BO3) - LPL Group Ascend",
-            "trades": 19,
-            "pnl": -3183.2975829999996
+            "question": "LoL: Weibo Gaming vs Anyone's Legend (BO3) - LPL Group Ascend",
+            "trades": 315,
+            "pnl": 10368.284280000002
         },
         {
-            "question": "Will Bitcoin dip to $35,000 in February?",
-            "trades": 11,
-            "pnl": 1297.355203
+            "question": "Magic vs. Thunder",
+            "trades": 115,
+            "pnl": 46687.85541
         },
         {
-            "question": "Binghamton Bearcats vs. UMBC Retrievers: O/U 139.5",
-            "trades": 10,
-            "pnl": 8690.574707
+            "question": "76ers vs. Clippers",
+            "trades": 111,
+            "pnl": 16970.458307
         },
         {
-            "question": "LoL: JD Gaming vs Top Esports (BO3) - LPL Group Ascend",
-            "trades": 10,
-            "pnl": -635.615178
+            "question": "LoL: OKSavingsBank BRION vs BNK FEARX (BO3)",
+            "trades": 76,
+            "pnl": -12750.27392
         },
         {
-            "question": "Canadiens vs. Jets",
-            "trades": 8,
-            "pnl": 2416.8568
+            "question": "LoL: Invictus Gaming vs JD Gaming (BO3) - LPL Group Ascend",
+            "trades": 67,
+            "pnl": 6514.462904000001
         },
         {
-            "question": "EdgeX FDV above $3B one day after launch?",
-            "trades": 8,
-            "pnl": 996.7719999999999
-        },
-        {
-            "question": "US strikes Iran by June 30, 2026?",
-            "trades": 8,
-            "pnl": 580.8191
+            "question": "Creighton Bluejays vs. Georgetown Hoyas",
+            "trades": 59,
+            "pnl": 6202.028786999999
         },
         {
             "question": "U.S. anti-cartel ground operation in Mexico by January 31?",
-            "trades": 7,
-            "pnl": 40502.81305
+            "trades": 56,
+            "pnl": 340710.357382
         },
         {
-            "question": "Valorant: Pcific Esports vs ULF Esports (BO3) - VCT EMEA Kickoff Playoffs",
-            "trades": 6,
-            "pnl": 481.53596000000005
+            "question": "LoL: JD Gaming vs Top Esports (BO3) - LPL Group Ascend",
+            "trades": 53,
+            "pnl": -58.475582999999915
         },
         {
-            "question": "LoL: Weibo Gaming vs Anyone's Legend (BO3) - LPL Group Ascend",
-            "trades": 5,
-            "pnl": -557.3863
+            "question": "Bulls vs. Bucks",
+            "trades": 47,
+            "pnl": 23549.63679
+        },
+        {
+            "question": "North Texas Mean Green vs. Rice Owls",
+            "trades": 45,
+            "pnl": 8499.572585
         }
     ]
 };
