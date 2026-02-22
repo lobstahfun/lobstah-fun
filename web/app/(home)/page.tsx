@@ -17,7 +17,7 @@ export default function HomePage() {
 
         <div className="grid gap-6 mt-16 sm:grid-cols-2 lg:grid-cols-3 text-left">
           <Link 
-            href="/docs/index" 
+            href="/docs" 
             className="group relative flex flex-col p-8 border rounded-2xl hover:border-primary transition-all hover:shadow-lg bg-card"
           >
             <div className="absolute top-4 right-4 text-xs font-mono opacity-20 group-hover:opacity-100">01</div>
@@ -30,7 +30,7 @@ export default function HomePage() {
           </Link>
 
           <Link 
-            href="/docs/project-spotlights/index" 
+            href="/docs/project-spotlights" 
             className="group relative flex flex-col p-8 border rounded-2xl hover:border-primary transition-all hover:shadow-lg bg-card"
           >
             <div className="absolute top-4 right-4 text-xs font-mono opacity-20 group-hover:opacity-100">02</div>
@@ -43,7 +43,7 @@ export default function HomePage() {
           </Link>
 
           <Link 
-            href="/docs/workspace/index" 
+            href="/docs/workspace" 
             className="group relative flex flex-col p-8 border rounded-2xl hover:border-primary transition-all hover:shadow-lg bg-card"
           >
             <div className="absolute top-4 right-4 text-xs font-mono opacity-20 group-hover:opacity-100">03</div>
@@ -64,7 +64,7 @@ export default function HomePage() {
         </div>
 
         <div className="flex justify-center space-x-4 pt-8">
-          <Link href="/docs/index" className="bg-primary text-primary-foreground px-10 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition-transform shadow-xl">
+          <Link href="/docs" className="bg-primary text-primary-foreground px-10 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition-transform shadow-xl">
             Enter the Playground
           </Link>
         </div>
