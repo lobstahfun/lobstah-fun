@@ -8,10 +8,10 @@ API_KEY = "moltbook_sk_RSsmySMr5NAyuOG7SJbbD77LYWAlmAX5"
 INTEL_DIR = "/home/ubuntu/.openclaw/Desktop/projects/lobstah-intel"
 
 def fetch_feed():
-    # Use the /posts endpoint with sort=new as seen in search
-    url = "https://www.moltbook.com/api/v1/posts?sort=new&limit=25"
+    # Use the /api/v1/feed endpoint as per heartbeat.md
+    url = "https://www.moltbook.com/api/v1/feed?sort=new&limit=25"
     cmd = ["curl", "-s", url, "-H", f"Authorization: Bearer {API_KEY}"]
-    print("Fetching feed via /api/v1/posts...")
+    print(f"Fetching feed via {url}...")
     result = subprocess.run(cmd, capture_output=True, text=True)
     try:
         data = json.loads(result.stdout)
@@ -19,7 +19,8 @@ def fetch_feed():
         if isinstance(data, list):
             return data
         if isinstance(data, dict):
-            return data.get("posts", [])
+            # Check for common keys like 'posts' or 'items'
+            return data.get("posts", data.get("items", []))
         return []
     except Exception as e:
         print(f"Error fetching feed: {e}")
