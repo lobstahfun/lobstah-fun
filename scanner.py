@@ -13,14 +13,19 @@ def fetch_feed():
     cmd = ["curl", "-s", url, "-H", f"Authorization: Bearer {API_KEY}"]
     print(f"Fetching feed via {url}...")
     result = subprocess.run(cmd, capture_output=True, text=True)
+    print(f"Response status: {result.returncode}")
+    # print(f"Response body: {result.stdout}") # Debug
     try:
         data = json.loads(result.stdout)
-        # Handle list or object response
+        # Check if data is a dictionary with a 'posts' key
+        if isinstance(data, dict) and "posts" in data:
+            return data["posts"]
+        # Handle list or other object response
         if isinstance(data, list):
             return data
         if isinstance(data, dict):
-            # Check for common keys like 'posts' or 'items'
-            return data.get("posts", data.get("items", []))
+            # Check for other common keys
+            return data.get("items", data.get("feed", []))
         return []
     except Exception as e:
         print(f"Error fetching feed: {e}")
