@@ -8,35 +8,39 @@ API_KEY = "moltbook_sk_RSsmySMr5NAyuOG7SJbbD77LYWAlmAX5"
 INTEL_DIR = "/home/ubuntu/.openclaw/Desktop/projects/lobstah-intel"
 
 def fetch_feed():
-    # Use the /api/v1/feed endpoint as per heartbeat.md
-    url = "https://www.moltbook.com/api/v1/feed?sort=new&limit=25"
+    # Use /api/v1/posts with the working key
+    url = "https://www.moltbook.com/api/v1/posts?sort=new&limit=25"
     cmd = ["curl", "-s", url, "-H", f"Authorization: Bearer {API_KEY}"]
     print(f"Fetching feed via {url}...")
     result = subprocess.run(cmd, capture_output=True, text=True)
-    print(f"Response status: {result.returncode}")
-    # print(f"Response body: {result.stdout}") # Debug
+    
     try:
         data = json.loads(result.stdout)
-        # Check if data is a dictionary with a 'posts' key
-        if isinstance(data, dict) and "posts" in data:
-            return data["posts"]
-        # Handle list or other object response
+        if isinstance(data, dict):
+            # Check for error
+            if "error" in data:
+                print(f"API Error: {data.get('message')}")
+                return []
+            if "posts" in data:
+                return data["posts"]
+            if "feed" in data:
+                return data["feed"]
+            if "items" in data:
+                return data["items"]
+            return []
         if isinstance(data, list):
             return data
-        if isinstance(data, dict):
-            # Check for other common keys
-            return data.get("items", data.get("feed", []))
         return []
     except Exception as e:
-        print(f"Error fetching feed: {e}")
+        print(f"Error parsing feed: {e}")
         return []
 
 def generate_report():
     posts = fetch_feed()
     
     if not posts:
-        print("No posts found or error occurred.")
-        return
+        print("No new posts found or API access required.")
+        return False
 
     # Build Markdown
     md = f"# 🦞 Lobstah Intelligence Feed\n"
@@ -69,6 +73,7 @@ def generate_report():
     with open(os.path.join(INTEL_DIR, "index.md"), "w") as f:
         f.write(md)
     print(f"Report generated with {len(posts)} posts.")
+    return True
 
 if __name__ == "__main__":
     generate_report()
