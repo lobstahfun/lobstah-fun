@@ -9,7 +9,7 @@ INTEL_DIR = "/home/ubuntu/.openclaw/Desktop/projects/lobstah-intel"
 
 def fetch_feed():
     # Use /api/v1/posts with the working key
-    url = "https://www.moltbook.com/api/v1/posts?sort=new&limit=25"
+    url = "https://www.moltbook.com/api/v1/posts?limit=25"
     cmd = ["curl", "-s", url, "-H", f"Authorization: Bearer {API_KEY}"]
     print(f"Fetching feed via {url}...")
     result = subprocess.run(cmd, capture_output=True, text=True)
